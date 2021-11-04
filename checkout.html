@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styleCart.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Checkout</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"> <img src="/website-images/14ad7925179123.5634284cba8fe.png" alt="logo" width="125" height="100"> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link"  href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="cart.html">Cart</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<!-- End of nav bar -->
+
+<div class="container">
+    <div class="py-5 text-center">
+        <h1>Checkout</h1>
+        <p class="lead">Please fill out form to finish with your purchase</p>
+    </div>
+</div>
+
+<div class="container">
+    <h4 class="mb-3">Billing address</h4>
+    <form action="#">
+        <div class="row g-3">
+            <div class="col-sm-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input id="firstName" type="text" class="form-control" placeholder="Jane" required>
+                <div class="invalid-feedback">Valid first name is required.</div>
+            </div>
+            <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input id="lastName" type="text" class="form-control" placeholder="Doe" required>
+                <div class="invalid-feedback">Valid last name is required.</div>
+            </div>
+        
+        <br>
+        <div class="col-md-5">
+            <label for="country" class="form-label">Country</label>
+            <select id="country" class="form-control" required>
+                <option value="">Choose...</option>
+                <option value="United States">United States</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="Japan">Japan</option>
+                <option value="France">France</option>
+            </select>
+            <div class="invalid-feedback">Valid Country name is required.</div>
+        </div>
+            <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select id="state" class="form-control" required>
+                <option value="">Choose...</option>
+                <option value="NY">NY</option>
+                <option value="NJ">NJ</option>
+                <option value="FL">FL</option>
+                <option value="CA">CA</option>
+                <option value="WA">WA</option>
+                </select>
+                <div class="invalid-feedback">Valid State name is required.</div>
+            </div>
+            <div class="col-md-3">
+                <label for="zipcode" class="form-label">Zip Code</label>
+                <input id="zipcode" type="number" class="form-control" placeholder="12345" required>
+                <div class="invalid-feedback">Valid zipcode name is required.</div>
+            </div>
+
+            <div class="col-xl-9">
+                <label for="address" class="form-label">Address</label>
+                <input id="address" type="text" class="form-control" placeholder="123 James Street Apartment 1B" required>
+                <div class="invalid-feedback">Valid address name is required.</div>
+            </div>
+
+            <hr class="my-4">
+            
+            <div class="col-12">
+                <div class="form-check">
+                    <input id="sameAddress" type="checkbox">
+                    <label class="form-check-label" for="sameAddress">Shipping address is the same as billing.</label>
+                </div>
+                <div class="form-check">
+                    <input id="saveinfo" type="checkbox">
+                    <label class="form-check-label" for="saveinfo">Save this information.</label>
+                </div>
+            </div>
+            <hr class="my-4">
+
+            <h4 class="mb-3">Payments</h4>
+            
+            <div class="form-check">
+                <input id="creditcard" name="paymentmethod" type="radio" class="form-check-input" checked required>
+                <label for="creditcard">Credit Card</label>
+            </div>
+
+            <div class="form-check">
+                <input id="debitcard" name="paymentmethod" type="radio" class="form-check-input" checked required>
+                <label for="debitcard">Debit Card</label>
+            </div>
+
+            <div class="form-check">
+                <input id="paypal" name="paymentmethod" type="radio" class="form-check-input" checked required>
+                <label for="paypal">PayPal</label>
+            </div>
+
+            <div class="row my-3 gy-3">
+                <div class="col-md-6">
+                    <label for="fullName" class="form-label">
+                    Name on card
+                </label>
+                    <input id="fullName" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Name on card is required</div>
+                    <small class="text-muted">Full name as displayed on card.</small>
+                    <div class="invalid-feedback">Full name is required.</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="cc" class="form-label">
+                    Credit Card Number 
+                    </label>
+                    <input id="cc" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Credit Card number is required.</div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label for="expire" class="form-label">
+                    Expiration Date
+                    </label>
+                    <input id="expire" type="month" name="expire" class="form-control" required>
+                    <div class="invalid-feedback">Expiration Date is required.</div>
+            </div>
+
+            <div class="col-md-3">
+                <label for="cvv" class="form-label">
+                    CVV
+                    </label>
+                    <input id="cvv" type="number" name="cvv" class="form-control" required>
+                    <div class="invalid-feedback">CVV is required.</div>
+            </div>
+
+            <hr class="my-4">
+
+            <button class="btn btn-primary btn-lg btn-block my-3">Make Payment</button>
+                
+        </div>
+    </form>
+</div>
+
+
+
+   <!-- footer  -->
+
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iso mobile phone</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="website-images/14ad7925179123.5634284cba8fe.png" alt="footer" width="125">
+                <p>Our purpose is to provide fashion unlike any other. Providing exclusive brands accessible to many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affilate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
